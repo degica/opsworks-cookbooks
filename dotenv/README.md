@@ -7,8 +7,7 @@ set in your stack settings custom JSON
 Opsworks Set-Up
 ---------------
 
-* Add the following keys "env" and 
-"symlink_before_migrate" to your stack settings custom JSON
+* Add the following to your stacks custom JSON
 
 	    {
         	"deploy": {
@@ -17,11 +16,7 @@ Opsworks Set-Up
                     	"AWS_ACCESS_KEY_ID": "SOMEVALUE" 
                 	}
             	}
-        	},
-        	"symlink_before_migrate": {
-        		"config/dotenv": ".env"
-        	},
-        	...
+        	}
     	}
     
 * Associate **dotenv** custom recipe with the **deploy** event in your rails app's layer
