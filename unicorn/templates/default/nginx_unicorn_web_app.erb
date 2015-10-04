@@ -15,6 +15,7 @@ server {
   <%end %>
 
   keepalive_timeout 5;
+  recursive_error_pages on;
 
   root <%= @application[:absolute_document_root] %>;
 
