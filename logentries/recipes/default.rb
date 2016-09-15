@@ -13,7 +13,7 @@ template '/etc/rsyslog.d/logentries.conf' do
   source 'logentries.conf.erb'
   owner 'root'
   group 'root'
-  mode '0755'
+  mode '0644'
   variables(
     :token => logentries[:token]
   )
